@@ -1,0 +1,6 @@
+%h1.page-header
+  %div(class=container_class)
+    = content_for?(:header) ? yield(:header) : @title
+    - if content_for?(:secondary_nav)
+      .pull-right= yield(:secondary_nav)
+-#= render 'shared/breadcrumbs'

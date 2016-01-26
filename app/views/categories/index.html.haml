@@ -1,0 +1,22 @@
+.col-md-6
+  %h2 Category
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th
+          = link_to 'New', new_category_path(), class: 'btn btn-large btn-success'
+    %tbody
+    - @categories.each do |category|
+      %tr
+        %td
+          = category.name
+        %td
+          = category.description
+        %td
+          = link_to edit_category_path(category), class: 'btn btn-warning' do
+            %span.glyphicon.glyphicon-pencil
+          = link_to category_path(category), data: {confirm: 'Are You Sure?'}, class: 'btn btn-danger', method: :delete do
+            %span.glyphicon.glyphicon-trash
+
