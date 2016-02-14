@@ -34,10 +34,7 @@ class BrandsController < ApplicationController
 		if @brand
 			@brand.destroy
 			redirect_to brands_path, notice: 'Brand deleted successfully'
-		else
-			render :index
 		end
-		
 	end
 
 	private

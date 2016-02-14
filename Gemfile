@@ -51,5 +51,4 @@ gem 'binding_of_caller'
 gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'kaminari'
-gem 'progress_bar'
 
