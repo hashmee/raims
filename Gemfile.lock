@@ -134,11 +134,16 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    options (2.3.2)
     orm_adapter (0.5.0)
     parser (2.3.0.1)
       ast (~> 2.2)
     pg (0.18.3)
     powerpack (0.1.1)
+    pr_geohash (1.0.0)
+    progress_bar (1.0.5)
+      highline (~> 1.6)
+      options (~> 2.3.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -177,6 +182,8 @@ GEM
     ref (2.0.0)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
+    rsolr (1.0.13)
+      builder (>= 2.1.2)
     rubocop (0.36.0)
       parser (>= 2.3.0.0, < 3.0)
       powerpack (~> 0.1)
@@ -213,6 +220,14 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sunspot (2.2.4)
+      pr_geohash (~> 1.0)
+      rsolr (~> 1.0.7)
+    sunspot_rails (2.2.4)
+      nokogiri
+      rails (>= 3)
+      sunspot (= 2.2.4)
+    sunspot_solr (2.2.4)
     temple (0.7.6)
     terminal-table (1.5.2)
     therubyracer (0.12.2)
@@ -255,12 +270,15 @@ DEPENDENCIES
   js-routes (= 1.1.0)
   kaminari
   pg
+  progress_bar
   pry
   rails (= 4.2.1)
   rubocop
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form (= 3.1.0)
+  sunspot_rails
+  sunspot_solr
   therubyracer
   twitter-bootswatch-rails!
   uglifier (>= 1.3.0)

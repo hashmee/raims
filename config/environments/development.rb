@@ -37,9 +37,6 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-  Sunspot.config.solr.url = 'http://localhost:8982/solr'
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

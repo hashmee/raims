@@ -3,7 +3,17 @@ class Brand < ActiveRecord::Base
   validates :size, uniqueness: { scope: [:name, :item] }
   validates :category, presence: true
   after_create :create_code
+  after_update :create_code
   paginates_per 15
+
+  searchable do
+    string :name
+    string :item
+    string :item_code
+    string :size
+    float :quantity
+    string :category
+  end
   
   def cat_array
   category_array = []
