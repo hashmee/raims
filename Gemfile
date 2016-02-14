@@ -41,6 +41,9 @@ group :development do
 	gem 'sunspot_solr'
 end
 
+gem 'rails_12factor', group: :production
+
+
 gem 'devise'
 gem 'haml', '~> 4.0.5'
 gem 'jquery-rails'
