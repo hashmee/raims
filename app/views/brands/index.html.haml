@@ -1,31 +1,38 @@
-.col-md-10
-  %h2 Brand
-  %table.table.table-striped.table-hover
-    %thead
-      %tr
-        %th Category
-        %th ItemNumber
-        %th Name
-        %th Item
-        %th Size
-        %th
-          = link_to 'New', new_brand_path(), class: 'btn btn-large btn-success'
-    %tbody
-    - @brands.each do |brand|
-      %tr
-        %td
-          = brand.category
-        %td
-          = brand.item_code
-        %td
-          = brand.name
-        %td
-          = brand.item
-        %td
-          = brand.size
-        %td
-          = link_to edit_brand_path(brand), class: 'btn btn-warning' do
-            %span.glyphicon.glyphicon-pencil
-          = link_to brand_path(brand), data: {confirm: 'Are You Sure?'}, class: 'btn btn-danger', method: :delete do
-            %span.glyphicon.glyphicon-trash
-  = paginate @brands
+.container
+  .row
+    %h3 Search Results
+    = form_tag brands_path, :method => :get do
+      %p
+        = text_field_tag :search, params[:search]
+        = submit_tag "Search", :name => nil
+  .col-md-10
+    %h2 Brand
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th Category
+          %th ItemNumber
+          %th Name
+          %th Item
+          %th Size
+          %th
+            = link_to 'New', new_brand_path(), class: 'btn btn-large btn-success'
+      %tbody
+      - @brands.each do |brand|
+        %tr
+          %td
+            = brand.category
+          %td
+            = brand.item_code
+          %td
+            = brand.name
+          %td
+            = brand.item
+          %td
+            = brand.size
+          %td
+            = link_to edit_brand_path(brand), class: 'btn btn-warning' do
+              %span.glyphicon.glyphicon-pencil
+            = link_to brand_path(brand), data: {confirm: 'Are You Sure?'}, class: 'btn btn-danger', method: :delete do
+              %span.glyphicon.glyphicon-trash
+    = paginate @brands
