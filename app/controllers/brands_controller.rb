@@ -28,6 +28,7 @@ class BrandsController < ApplicationController
 	end
 
 	def update
+		binding.pry
 		if @brand.update_attributes(brand_params)
 			redirect_to brands_path, notice: 'Brand updated Successfully'
 		else
