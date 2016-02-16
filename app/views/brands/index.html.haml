@@ -1,11 +1,13 @@
 .container
   .row
-    %h3 Search Results
-    = form_tag brands_path, :method => :get do
-      %p
-        = text_field_tag :search, params[:search]
-        = submit_tag "Search", :name => nil
   .col-md-10
+    = form_tag brands_path, :method => :get do
+      .input-group
+        = text_field_tag :search, params[:search], class: 'search-query form-control', placeholder: 'search brands...'
+        %span.input-group-btn
+          %button.btn.btn-info{:type => "submit"}
+            %span.glyphicon.glyphicon-search
+        -# = submit_tag "Search", :name => nil
     %h2 Brand
     %table.table.table-striped.table-hover
       %thead

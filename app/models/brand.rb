@@ -6,12 +6,12 @@ class Brand < ActiveRecord::Base
   paginates_per 15
 
   searchable do
-    string :name
-    string :item
-    string :item_code
-    string :size
-    float :quantity
-    string :category
+    text :name
+    text :item
+    text :item_code
+    text :size
+    text :quantity
+    text :category
   end
   
   def cat_array

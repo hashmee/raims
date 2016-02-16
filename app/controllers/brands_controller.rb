@@ -4,8 +4,9 @@ class BrandsController < ApplicationController
 	def index
 	  @search = Brand.search do
       fulltext params[:search]
+      # order_by(:name, :asc)
+      paginate :page => params[:page], per_page: 15
    end
-   # binding.pry
     @brands = @search.results
 		# @brands = Brand.order(:name).page params[:page]
 	end
