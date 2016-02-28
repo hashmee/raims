@@ -38,7 +38,7 @@ group :development, :test do
 end
 
 gem 'rails_12factor', group: :production
-
+gem 'thin', group: :production
 
 gem 'devise'
 gem 'haml', '~> 4.0.5'
