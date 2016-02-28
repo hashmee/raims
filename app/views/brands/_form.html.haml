@@ -1,4 +1,4 @@
-= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Select a category"}, {class: "form-control"} 
+= f.collection_select :category_id, Category.order('id asc'), :id, :name, {prompt: "Select a category"}, {class: "form-control"} 
 = f.input :name
 = f.input :item
 = f.input :size

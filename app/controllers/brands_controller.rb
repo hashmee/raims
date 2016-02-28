@@ -23,7 +23,10 @@ class BrandsController < ApplicationController
 	end
 
 	def update
-		binding.pry
+		if brand_params[:category_id] != @brand.category_id 
+		  updated_code = @brand.update_code(brand_params[:category_id])
+		  @brand.update_attributes(item_code: updated_code)
+		end
 		if @brand.update_attributes(brand_params)
 			redirect_to brands_path, notice: 'Brand updated Successfully'
 		else

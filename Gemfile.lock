@@ -141,7 +141,10 @@ GEM
     parser (2.3.0.6)
       ast (~> 2.2)
     pg (0.18.4)
+    pluginator (1.3.0)
     powerpack (0.1.1)
+    pre-commit (0.27.0)
+      pluginator (~> 1.1)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -270,6 +273,7 @@ DEPENDENCIES
   js-routes (= 1.1.0)
   kaminari
   pg
+  pre-commit
   pry
   rails (= 4.2.1)
   rails_12factor
