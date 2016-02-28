@@ -2,13 +2,7 @@ class BrandsController < ApplicationController
 	before_action :find_brand, only: [:edit, :update, :destroy]
 
 	def index
-	  @search = Brand.search do
-      fulltext params[:search]
-      # order_by(:name, :asc)
-      paginate :page => params[:page], per_page: 15
-   end
-    @brands = @search.results
-		# @brands = Brand.order(:name).page params[:page]
+		@brands = Brand.order(:name).page params[:page]
 	end
 
 	def new

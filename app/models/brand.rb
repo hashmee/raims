@@ -4,15 +4,6 @@ class Brand < ActiveRecord::Base
   validates :category, presence: true
   after_create :create_code
   paginates_per 15
-
-  searchable do
-    text :name
-    text :item
-    text :item_code
-    text :size
-    text :quantity
-    text :category
-  end
   
   def cat_array
   category_array = []

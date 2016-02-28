@@ -37,10 +37,6 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 end
 
-group :development do
-	gem 'sunspot_solr'
-end
-
 gem 'rails_12factor', group: :production
 
 
@@ -58,5 +54,3 @@ gem 'binding_of_caller'
 gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 gem 'font-awesome-rails'
 gem 'kaminari'
-gem 'sunspot_rails'
-gem 'progress_bar'
