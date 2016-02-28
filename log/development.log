@@ -32128,3 +32128,41 @@ Started GET "/assets/united/bootswatch.self-04c61ea871ff44b9b2075bba7d1cac8f235e
 
 
 Started GET "/assets/united.self-b9536fcc0bb221d9e0889011e76586ccb2ff8b1c366e7aa87cc5a7b3b96170f9.js?body=1" for 127.0.0.1 at 2016-02-28 13:12:13 +0530
+
+
+Started GET "/brands" for 127.0.0.1 at 2016-02-28 13:18:37 +0530
+Processing by BrandsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mBrand Load (0.9ms)[0m  [1mSELECT  "brands".* FROM "brands" LIMIT 15 OFFSET 0[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "brands"
+  Rendered brands/index.html.haml within layouts/application (24.2ms)
+  Rendered shared/_navbar.html.haml (0.7ms)
+Completed 200 OK in 271ms (Views: 264.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-02-28 13:18:40 +0530
+Processing by BrandsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered brands/_form.html.haml (413.4ms)
+  Rendered brands/new.html.haml within layouts/application (649.1ms)
+  Rendered shared/_navbar.html.haml (1.0ms)
+Completed 200 OK in 967ms (Views: 957.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/brands/new" for 127.0.0.1 at 2016-02-28 13:18:41 +0530
+Processing by BrandsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered brands/_form.html.haml (167.0ms)
+  Rendered brands/new.html.haml within layouts/application (169.7ms)
+  Rendered shared/_navbar.html.haml (0.8ms)
+Completed 200 OK in 478ms (Views: 474.3ms | ActiveRecord: 0.8ms)
