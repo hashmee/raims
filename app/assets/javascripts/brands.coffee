@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#incoming_form').hide()
+	$('#save_incoming').on 'click', (event) ->
+	  event.preventDefault()
+	  event.stopPropagation()
+	  $(@).hide()
+	  $.ajax
+      type: 'GET'
+      url: '/brands'
+    $('#incoming_form').show()
+  

@@ -1,2 +1,32 @@
-%h2
-  this is incoming page where all the stock gets added
+.container
+  .row
+  .col-md-10
+    -# = form_tag brands_path, :method => :get do
+    -#   .input-group
+    -#     = text_field_tag :search, params[:search], class: 'search-query form-control', placeholder: 'search brands...'
+    -#     %span.input-group-btn
+    -#       %button.btn.btn-info{:type => "submit"}
+    -#         %span.glyphicon.glyphicon-search
+        -# = submit_tag "Search", :name => nil
+    %h2 Incomings
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th Category
+          %th ItemCode
+          %th Name
+          %th Quantity
+          %th Timings
+      %tbody
+      - @incomings.each do |incoming|
+        %tr
+          %td
+            = incoming.brand.category.name
+          %td
+            = incoming.brand.item_code
+          %td
+            = incoming.brand.name
+          %td
+            = incoming.quantity
+          %td
+            = ist incoming.created_at

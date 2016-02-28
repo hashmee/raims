@@ -1,0 +1,13 @@
+$("#tab_content").html("<%= escape_javascript(render('incoming')) %>");
+
+          %td
+            = link_to 'Incoming', '', class: 'btn btn-info btn-large', id: 'save_incoming'
+          %td
+            = link_to 'outgoing', '', class: 'btn btn-primary btn-large', id: 'save_outgoing'
+          -# %td
+          -#   = link_to 'Incoming', '', class: 'btn btn-info btn-large', data: { toggle: 'modal', target: '#ajax-incoming', brand: brand.id }
+          -# %td
+          -#   = link_to 'Outgoing', '', class: 'btn btn-primary btn-large', data: { toggle: 'modal', target: '#ajax-outgoing ', brand: brand.id }
+    #tab_content
+      = render 'incoming'
+      = render 'outgoing'

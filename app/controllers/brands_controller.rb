@@ -3,6 +3,11 @@ class BrandsController < ApplicationController
 
 	def index
 		@brands = Brand.order(:name).page params[:page]
+		@incoming = Incoming.new
+		respond_to do |format|
+			format.html
+			format.js
+		end
 	end
 
 	def new

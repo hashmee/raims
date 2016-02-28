@@ -1,0 +1,6 @@
+.container
+  .col-md-8
+    = simple_form_for(@incoming) do |f|
+      = f.input :quantity
+      = f.hidden_field :brand_id, value: @brand
+      = f.button :submit

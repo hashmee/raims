@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20160228100615) do
   end
 
   create_table "incomings", force: :cascade do |t|
-    t.integer  "quantity"
+    t.float    "quantity"
     t.integer  "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
