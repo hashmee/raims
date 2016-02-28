@@ -2,7 +2,7 @@ class BrandsController < ApplicationController
 	before_action :find_brand, only: [:edit, :update, :destroy]
 
 	def index
-		@brands = Brand.all.page params[:page]
+		@brands = Brand.order(:name).page params[:page]
 	end
 
 	def new
