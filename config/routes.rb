@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :brands
   resources :incomings
+  resources :outgoings
   # You can have the root of your site routed with "root"
-   root 'categories#index'
+   root 'brands#index'
 
 
   # Example of regular route:

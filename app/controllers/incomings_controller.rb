@@ -11,7 +11,7 @@ class IncomingsController < ApplicationController
 	def create
 		@incoming = Incoming.new(incoming_params)
 		if @incoming.save!
-			redirect_to incomings_path, notice: 'Incoming added successfully'
+			redirect_to brands_path, notice: 'Incoming added successfully'
 		else
 			render :new
 		end

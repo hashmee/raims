@@ -1,0 +1,32 @@
+.container
+  .row
+  .col-md-10
+    -# = form_tag brands_path, :method => :get do
+    -#   .input-group
+    -#     = text_field_tag :search, params[:search], class: 'search-query form-control', placeholder: 'search brands...'
+    -#     %span.input-group-btn
+    -#       %button.btn.btn-info{:type => "submit"}
+    -#         %span.glyphicon.glyphicon-search
+        -# = submit_tag "Search", :name => nil
+    %h2 Outgoings
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th Category
+          %th ItemCode
+          %th Name
+          %th Quantity
+          %th Timings
+      %tbody
+      - @outgoings.each do |outgoing|
+        %tr
+          %td
+            = outgoing.brand.category.name
+          %td
+            = outgoing.brand.item_code
+          %td
+            = outgoing.brand.name
+          %td
+            = outgoing.quantity
+          %td
+            = ist outgoing.created_at

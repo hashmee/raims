@@ -1,6 +1,7 @@
 class Brand < ActiveRecord::Base
   belongs_to :category
   has_many :incomings
+  has_many :outgoings
   validates :size, uniqueness: { scope: [:name, :item] }
   validates :category, presence: true
   after_create :create_code
